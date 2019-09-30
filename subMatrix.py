@@ -1,3 +1,6 @@
+import sys
+
+# function returns a list of sums for each possible square sub-matrix of size k x k, given a square matrix
 def subMatrixSums(matrix, k):
 
     # calculates dimension of matrix
@@ -5,7 +8,8 @@ def subMatrixSums(matrix, k):
 
     # doesn't allow for sub-matrix bigger than original matrix
     if k > dimension:
-        return
+        print("K value not allowed")
+        sys.exit()
 
     # calculates height of sumMatrix and creates empty sumMatrix
     tempHeight = dimension - k + 1
