@@ -44,27 +44,19 @@ def subMatrixSums(matrix, k):
 
     return outMatrix
 
-
+# returns minimum possible sum of a sub-matrix of size k x k 
 def subMatrixMin(matrix, k):
     return min(subMatrixSums(matrix, k))
 
-
+# returns maximum possible sum of a sub-matrix of size k x k 
 def subMatrixMax(matrix, k):
     return max(subMatrixSums(matrix, k))
 
-
 def main():
-    testMatrix = [[1, 1, 1, 1, 1], [2, 2, 2, 2, 2], [3, 3, 3, 3, 3], [4, 4, 4, 4, 4], [5, 5, 5, 5, 5]]
-    testMatrixTwo = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]
+    testMatrix = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]
 
     print(subMatrixSums(testMatrix, 3))
     print(subMatrixMin(testMatrix, 3))
     print(subMatrixMax(testMatrix, 3))
-    print()
-    print()
-    print(subMatrixSums(testMatrixTwo, 2))
-    print(subMatrixMin(testMatrixTwo, 2))
-    print(subMatrixMax(testMatrixTwo, 2))
-
 
 main()
